@@ -61,7 +61,7 @@ export default class AlignItems extends Component {
                 </View>
                 <View style={styles.right}>
                 <View style={[styles.box, styles.homebox]}>
-                <Button style={styles.homeButton} onPress={ ()=>{navigate('Title',(title: 'RITips'))}}title='RITips' color='#000000'/>
+                <Button style={styles.homeButton} onPress={ ()=>{navigate('Title',(title: 'RITips'))}} title='RITips'  color='#000000'/>
                 </View>
                 </View>
                
@@ -183,6 +183,7 @@ homeButton: {
 flex: 1,
 alignSelf: 'flex-end',
 justifyContent: 'flex-end',
+                                 fontWeight: 'bold',
 
 
 

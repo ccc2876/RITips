@@ -13,7 +13,7 @@ class EntertainmentMap extends Component {
         {latitude: 43.084097095096894, longitude: -77.66891766217958},//The Den
         {latitude: 43.08430500000001, longitude: -77.68473700000004}//Red Barn
       ];
-      
+
       return(
         <MapView
           style={{flex: 1}}

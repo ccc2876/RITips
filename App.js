@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import StyleSheet,{View, Button, Alert} from 'react-native';
-import {StackNavigator} from 'react-navigation';
+import React,  {Component } from 'react';
+import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
+import {StackNavigator,TabNavigator} from 'react-navigation';
 
 
 
-
-export default class AlignItems extends Component {
+class HomeScreen extends Component {
+    static navigationOptions={header: null};
     render() {
+        const {navigate} =this.props.navigation;
         return (
         <View style={styles.wrapper}>
             <View style={styles.right}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Entertainment','this will take you to the map of entertainment')}} title='Entertainment' color='#D3D3D3' fontColor= '#000000'/>
+                <Button style={styles.button} onPress={ ()=>{Alert.alert('Entertainment','this will take you to the map of entertainment')}}  title='Entertainment'  color='#A9A9A9' />
                 </View>
             </View>
                 <View style={styles.left}>
@@ -26,7 +27,7 @@ export default class AlignItems extends Component {
                 </View>
                 <View style={styles.left}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Tutoring Services','this will take you to the map of tutoring services')}}title='Tutoring Services' color='#D3D3D3'/>
+                <Button style={styles.button} onPress={ ()=>{Alert.alert('Tutoring Services','this will take you to the map of tutoring services')}}title='Tutoring Services' color='#A9A9A9'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -40,7 +41,7 @@ export default class AlignItems extends Component {
                 </View>
                 <View style={styles.left}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Smart Study Spots','this will take you to the map of study spots')}}title='Smart Study Spots' color='#D3D3D3'/>
+                <Button style={styles.button} onPress={ ()=>{Alert.alert('Smart Study Spots','this will take you to the map of study spots')}}title='Smart Study Spots' color='#A9A9A9'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -64,17 +65,108 @@ export default class AlignItems extends Component {
                 </View>
                 <View style={styles.right}>
                 <View style={[styles.box, styles.homebox]}>
-                <Button style={styles.homeButton} onPress={() => navigate('Home')} title='RITips'  color='#000000'/>
+                <Button style={styles.homeButton} onPress={() => navigate('AboutUs')} title='RITips'  color='#000000'/>
                 </View>
                 </View>
                
                 </View>
                 );
     }
+
 }
 
+class ClaireScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'Claire',header: null, swipeEnabled: true}
+    render() {
+        
+        return (
+                <View>
+                <Text style={styles.about}> Claire Casalnova</Text>
+                <Image
+                
+                source={require('./IMG_1207.jpg')}
+                style={styles.image}>
+                </Image>
+                </View>
+                );
+    }
+}
+class KenScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'Ken',header: null, swipeEnabled: true}
+    render() {
+        
+        return (
+        <Text RITips/>
+                );
+    }
+}
+class MackenzieScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'Mackenzie',header: null, swipeEnabled: true}
+    render() {
+        
+        return (
+                <Text RITips/>
+                );
+    }
+}
+class MalcolmScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'Malcolm',header: null, swipeEnabled: true}
+    render() {
+        
+        return (
+                <Text RITips/>
+                );
+    }
+}
+class NateScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'Nate',header: null, swipeEnabled: true}
+    render() {
+        
+        return (
+                <Text RITips/>
+                );
+    }
+}
+const TabNav= TabNavigator({
+    Claire: {screen: ClaireScreen},
+    Ken: {screen: KenScreen},
+    Mackenzie: {screen: MackenzieScreen},
+    Malcolm: {screen: MalcolmScreen},
+    Nate: {screen: NateScreen},
+   
+                           
+                           
+                           
+                           });
+
+const BasicApp = StackNavigator({
+      Home: {screen: HomeScreen},
+      AboutUs: {screen: TabNav},
+      
+
+      },
+      
+);
+
+
 const styles = {
-                                 
+    
+about:{
+fontWeight: 'bold',
+fontSize: 35,
+
+},
+image: {
+justifyContent: 'flex-start',
+alignItems: 'center',
+width: 200,
+height: 200
+},
+
+black: {
+color: '#000000',
+},
+    
 wrapper: {
 flex: 1,
 backgroundColor: '#F36E21',
@@ -194,3 +286,7 @@ color: '#000000',
 }
 
 };
+
+
+export default BasicApp;
+

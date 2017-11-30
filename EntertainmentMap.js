@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import StackNavigator from 'react-navigation';
 import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
+import Constants from './App';
 
 class EntertainmentMap extends Component {
     static navigationOptions= {header:null};
@@ -20,7 +21,7 @@ var coords = [
 return(
 <MapView
     style={{flex: 1}}
-    initialRegion={coords}
+    initialRegion={Constants.initalCoords}
     >
     <MapView.Marker
         coordinate={coords[0]}
@@ -32,7 +33,7 @@ return(
                     <Text style={textStyleHeader}> Gene Polisseni Center </Text>
                 </View>
                 <View style={calloutStyleImage}>
-                    
+
                 </View>
                 <View style={calloutStyleDesc}>
                     <Text> testing testing 1 2 3 </Text>
@@ -105,4 +106,3 @@ height: 150
 
 
 export default EntertainmentMap
-

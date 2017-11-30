@@ -4,9 +4,21 @@ import {StackNavigator,TabNavigator} from 'react-navigation';
 import EntertainmentMap from './EntertainmentMap';
 
 
+const initialCoords = {
+  latitude: 43.0861,
+  longitude: -77.6705,
+  latitudeDelta: 0.0922,
+  longitudeDelta: 0.0421,
+};
 
+class Constants{
+  static get initialCoords(){
+    return initialCoords;
+  }
+}
 class HomeScreen extends Component {
- 
+
+
     static navigationOptions={header: null};
     render() {
         const {navigate} =this.props.navigation;
@@ -22,7 +34,7 @@ class HomeScreen extends Component {
                     <Button style={styles.button} onPress={ ()=>{Alert.alert('Athletics','this will take you to the map of athletics')}}title='Athletics' color='#173636'/>
                     </View>
                 </View>
-               
+
                 <View style={styles.container4}>
                 <View style={[styles.box, styles.box2r]}>
                 </View>
@@ -70,7 +82,7 @@ class HomeScreen extends Component {
                 <Button style={styles.homeButton} onPress={() => navigate('AboutUs')} title='RITips'  color='#000000'/>
                 </View>
                 </View>
-               
+
                 </View>
                 );
     }
@@ -80,12 +92,12 @@ class HomeScreen extends Component {
 class ClaireScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'Claire',header: null, swipeEnabled: true}
     render() {
-        
+
         return (
                 <View>
                 <Text style={styles.about}> Claire Casalnova</Text>
                 <Image
-                
+
                 source={require('./IMG_1207.jpg')}
                 style={styles.image}>
                 </Image>
@@ -96,7 +108,7 @@ class ClaireScreen extends Component{
 class KenScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'Ken',header: null, swipeEnabled: true}
     render() {
-        
+
         return (
         <Text RITips/>
                 );
@@ -105,7 +117,7 @@ class KenScreen extends Component{
 class MackenzieScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'Mackenzie',header: null, swipeEnabled: true}
     render() {
-        
+
         return (
                 <Text RITips/>
                 );
@@ -114,7 +126,7 @@ class MackenzieScreen extends Component{
 class MalcolmScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'Malcolm',header: null, swipeEnabled: true}
     render() {
-        
+
         return (
                 <Text RITips/>
                 );
@@ -123,7 +135,7 @@ class MalcolmScreen extends Component{
 class NateScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'Nate',header: null, swipeEnabled: true}
     render() {
-        
+
         return (
                 <View>
                 <Text RITips/>
@@ -138,25 +150,25 @@ const TabNav= TabNavigator({
     Mackenzie: {screen: MackenzieScreen},
     Malcolm: {screen: MalcolmScreen},
     Nate: {screen: NateScreen},
-   
-                           
-                           
-                           
+
+
+
+
                            });
 
 const BasicApp = StackNavigator({
       Home: {screen: HomeScreen},
       AboutUs: {screen: TabNav},
       EntertainmentPage: {screen: EntertainmentMap},
-      
+
 
       },
-      
+
 );
 
 
 const styles = {
-    
+
 about:{
 fontWeight: 'bold',
 fontSize: 35,
@@ -172,26 +184,26 @@ height: 200
 black: {
 color: '#000000',
 },
-    
+
 wrapper: {
 flex: 1,
 backgroundColor: '#F36E21',
 marginTop: 20,
 },
-                                 
+
 right: {
 flex: .5,
 flexDirection: 'row',
 justifyContent: 'flex-end', //replace with flex-end or center
 },
-                                 
+
 left: {
 flex: .5,
 flexDirection: 'row',
 alignItems: 'flex-start', //replace with flex-end or center
 justifyContent: 'center',
 },
-                                 
+
 container3: {
 flex: .5,
 flexDirection: 'row',
@@ -199,7 +211,7 @@ alignItems: 'flex-start', //replace with flex-end or center
 justifyContent: 'flex-start',
 
 },
-                                 
+
 container4: {
 flex: .5,
 flexDirection: 'row',
@@ -207,7 +219,7 @@ alignItems: 'center', //replace with flex-end or center
 justifyContent: 'flex-end',
 
 },
-                                 
+
 center: {
 flex: .5,
 flexDirection: 'row',
@@ -215,19 +227,19 @@ alignItems: 'center', //replace with flex-end or center
 justifyContent: 'center',
 
 },
-                                 
+
 homebox: {
 width: 75,
 height: 45,
 
 },
-                                 
+
 box: {
 marginTop: 10,
 width: 350,
 height: 45,
 },
-                                 
+
 box2r: {
 marginTop: 10,
 width: 100,
@@ -236,7 +248,7 @@ backgroundColor: '#663300',
 borderWidth: 2,
 borderColor: '#000000',
 },
-                                 
+
 box2l: {
 marginTop: 10,
 width: 100,
@@ -245,7 +257,7 @@ backgroundColor: '#663300',
 borderWidth: 2,
 borderColor: '#000000',
 },
-                                 
+
 greybox: {
 backgroundColor: '#D3D3D3',
 borderWidth: 2,
@@ -295,4 +307,3 @@ color: '#000000',
 
 
 export default BasicApp;
-

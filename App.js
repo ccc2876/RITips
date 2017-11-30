@@ -3,19 +3,6 @@ import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
 import {StackNavigator,TabNavigator} from 'react-navigation';
 import EntertainmentMap from './EntertainmentMap';
 
-
-const initialCoords = {
-  latitude: 43.0861,
-  longitude: -77.6705,
-  latitudeDelta: 0.0922,
-  longitudeDelta: 0.0421,
-};
-
-class Constants{
-  static get initialCoords(){
-    return initialCoords;
-  }
-}
 class HomeScreen extends Component {
 
 
@@ -98,7 +85,7 @@ class ClaireScreen extends Component{
                 <Text style={styles.about}> Claire Casalnova</Text>
                 <Image
 
-                source={require('./IMG_1207.jpg')}
+                //source={require('./IMG_1207.jpg')}
                 style={styles.image}>
                 </Image>
                 </View>

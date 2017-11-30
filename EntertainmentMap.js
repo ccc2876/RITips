@@ -7,7 +7,7 @@ import Constants from './App';
 const initialCoords = {
   latitude: 43.0861,
   longitude: -77.6705,
-  latitudeDelta: 0.0922,
+  latitudeDelta: 0.0522,
   longitudeDelta: 0.0421,
 };
 
@@ -28,7 +28,7 @@ var coords = [
 return(
 <MapView
     style={{flex: 1}}
-    initialRegion={initalCoords}
+    initialRegion={initialCoords}
     >
     <MapView.Marker
         coordinate={coords[0]}

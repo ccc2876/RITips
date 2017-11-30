@@ -17,9 +17,9 @@ class HomeScreen extends Component {
                 <Button style={styles.button} onPress={() => navigate('EntertainmentPage')} title='Entertainment'  color='#A9A9A9' />
                 </View>
                 </View>
-                <View style={styles.left}>
-                <View style={styles.blackboxsizechange}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Athletics','this will take you to the map of athletics')}}title='Athletics' color='#173636'/>
+                <View style={styles.right}>
+                <View style={[styles.box, styles.box3]}>
+                
                 </View>
                 </View>
                 
@@ -51,18 +51,18 @@ class HomeScreen extends Component {
                 <Button style={styles.button} onPress={() => navigate('Home')} title='Dining' color='#173636'/>
                 </View>
                 </View>
-                <View style={styles.left}>
-                <View style={styles.whiteboxsizechange}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Trails','this will take you to the map of the trails')}}title='Trails' color='#000000'/>
+                <View style={styles.center}>
+                <View style={[styles.box, styles.box2r]}>
+                
+                </View>
+                </View>
+                <View style={styles.container3}>
+                <View style={[styles.box, styles.box4]}>
                 </View>
                 </View>
                 <View style={styles.center}>
-                <View style={[styles.box, styles.box2l]}>
-                </View>
-                </View>
-                <View style={styles.right}>
-                <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Student Employment','this will take you to the map of student employment')}}title='Student Employment' color='#173636'/>
+                <View style={styles.box3}>
+                <Button style={styles.button} onPress={ ()=>{Alert.alert('Trails','this will take you to the map of the trails')}}title='Trails' color='#173636'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -78,7 +78,7 @@ class HomeScreen extends Component {
 }
 
 class ClaireScreen extends Component{
-    static navigationOptions ={ tabBarLabel: 'Claire',header: null, swipeEnabled: true}
+    static navigationOptions ={ tabBarLabel: 'CC',header: null, swipeEnabled: true}
     render() {
         
         return (
@@ -94,25 +94,41 @@ class ClaireScreen extends Component{
     }
 }
 class KenScreen extends Component{
-    static navigationOptions ={ tabBarLabel: 'Ken',header: null, swipeEnabled: true}
+    static navigationOptions ={ tabBarLabel: 'KS',header: null, swipeEnabled: true}
     render() {
         
         return (
-                <Text RITips/>
+                <View>
+                <Text style={styles.title}>Ken Shultes</Text>
+                <Image
+                
+                source={require('./ken.png')}
+                style={styles.image}>
+                </Image>
+                <Text>I am a first year Applied Mathematics student at RIT, and I contributed to the project by helping with research. There are many student attractions and tutoring services that I helped research and contributed to the content of the final product for the app.</Text>
+                </View>
                 );
     }
 }
 class MackenzieScreen extends Component{
-    static navigationOptions ={ tabBarLabel: 'Mackenzie',header: null, swipeEnabled: true}
+    static navigationOptions ={ tabBarLabel: 'MO',header: null, swipeEnabled: true}
     render() {
         
         return (
-                <Text RITips/>
+                <View>
+                <Text style={styles.title}>Mackenzie Orcutt</Text>
+                <Image
+                
+                source={require('./mackenzie.png')}
+                style={styles.image}>
+                </Image>
+                <Text>I am a first year Biomedical Sciences and Biotechnology and Molecular Bioscience dual-major at RIT. My contributions to this map have been in field research and contact outreach. I met with collaborators of the project to compile data, facilitated communication to administrative sources, and aided in UI design.</Text>
+                </View>
                 );
     }
 }
 class MalcolmScreen extends Component{
-    static navigationOptions ={ tabBarLabel: 'Malcolm',header: null, swipeEnabled: true}
+    static navigationOptions ={ tabBarLabel: 'MSG',header: null, swipeEnabled: true}
     render() {
         
         return (
@@ -120,7 +136,7 @@ class MalcolmScreen extends Component{
                 <Text style={styles.title}>Malcolm Sherman-Godfrey</Text>
                 <Image
                 
-                source={require('./IMG_1207.jpg')}
+                source={require('./malcolm.png')}
                 style={styles.image}>
                 </Image>
                 <Text>I am a first year Electrical Engineering student here at RIT. My primary contribution to the development of this app was in the form of research. I went out and physically mapped some of the locations, and also accumulated data to include in the final product.</Text>
@@ -130,15 +146,32 @@ class MalcolmScreen extends Component{
     }
 }
 class NateScreen extends Component{
-    static navigationOptions ={ tabBarLabel: 'Nate',header: null, swipeEnabled: true}
+    static navigationOptions ={ tabBarLabel: 'NB',header: null, swipeEnabled: true}
     render() {
         
         return (
                 <View>
-                <Text RITips/>
+                <Text style={styles.title}>Nate Baker</Text>
+                <Image
+                
+                source={require('./IMG_1207.jpg')}
+                style={styles.image}>
+                </Image>
+                <Text>I am a first year Computer Science student at RIT. My contribution was development of the Google Maps integration, and learning and using the API in order to create something that is both informative and presentable.</Text>
                 </View>
                 );
     }
+}
+class infoScreen extends Component{
+    static navigationOptions ={ tabBarLabel: 'I',header: null, swipeEnabled: true}
+    render() {
+        return (
+        <View>
+        <Text style={styles.title}>Nate Baker</Text>
+        </View>
+                );
+    }
+    
 }
 
 const TabNav= TabNavigator({
@@ -147,7 +180,7 @@ const TabNav= TabNavigator({
                            Mackenzie: {screen: MackenzieScreen},
                            Malcolm: {screen: MalcolmScreen},
                            Nate: {screen: NateScreen},
-                           
+                           info: {screen: infoScreen}
                            
                            
                            
@@ -251,6 +284,24 @@ backgroundColor: '#663300',
 borderWidth: 2,
 borderColor: '#000000',
 },
+ 
+box3: {
+marginTop: 10,
+width: 300,
+height: 40,
+backgroundColor: '#173636',
+borderWidth: 2,
+borderColor: '#000000',
+},
+box4: {
+marginTop: 10,
+width: 300,
+height: 40,
+backgroundColor: '#000000',
+borderWidth: 2,
+borderColor: '#000000',
+},
+    
     
 box2l: {
 marginTop: 10,

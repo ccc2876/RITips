@@ -4,6 +4,13 @@ import StackNavigator from 'react-navigation';
 import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
 import Constants from './App';
 
+const initialCoords = {
+  latitude: 43.0861,
+  longitude: -77.6705,
+  latitudeDelta: 0.0922,
+  longitudeDelta: 0.0421,
+};
+
 class EntertainmentMap extends Component {
     static navigationOptions= {header:null};
 render(){
@@ -21,7 +28,7 @@ var coords = [
 return(
 <MapView
     style={{flex: 1}}
-    initialRegion={Constants.initalCoords}
+    initialRegion={initalCoords}
     >
     <MapView.Marker
         coordinate={coords[0]}

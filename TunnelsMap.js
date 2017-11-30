@@ -1,34 +1,42 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 
-class TunnelsMap extends Component {
-  var coords = [
-    {43.084896, -77.673350},//Ritter Entrance 1
-    {43.084437, -77.673889},//Clark Gym 1
-    {43.084336, -77.673766},//Clark Gym Entrance 1
-    {43.084346, -77.673869},//Clark Gym Entrance 2
-    {43.084179, -77.673946},//Campus Center Entrance
-    {43.083673, -77.673913},//Back Campus Center Entrance
-    {43.083942, -77.674499},//Ritz Entrance
-    {43.084153, -77.674958},//Artenaso Entrance
-    {43.084023, -77.675539},//SAU Back Entrance
-    {43.084445, -77.673526},//Interfaith Center Entrance
-    {43.083828, -77.673591},//Interfaith Center Back Entrance
-    {43.083786, -77.673465},//SAU Creepy Back Entrance
-    {43.083841, -77.675874},//Library Entrance 1
-    {43.083578, -77.676453},//Library Entrance 2
-    {43.084287, -77.676545},//Library Front Entrance
-    {43.084632, -77.676319},//COLA Entrance 1
-    {43.084484, -77.676561},//COLA Entrance 2
-    {43.084322, -77.677307},//Gleason Entrance 1
-    {43.084048, -77.677451},//Gleason Entrance 2
-    {43.083770, -77.677356},//Gosnell Entrance 1
-    {43.083601, -77.676740},//Gosnell Entrance 2
-    {43.083458, -77.676899},//Gosnell Entrance 3
-    {43.083502, -77.677543},//Gosnell Entrance 4
-    {43.083684, -77.678120},//Gosnell Entrance 5
+const initialCoords = {
+  latitude: 43.0861,
+  longitude: -77.6705,
+  latitudeDelta: 0.0522,
+  longitudeDelta: 0.0421,
+};
 
+class TunnelsMap extends Component {
+
+  var coords = [
+    {latitude : 43.084896, longitude : -77.673350},//Ritter Entrance 1
+    {latitude : 43.084437, longitude: -77.673889},//Clark Gym 1
+    {latitude : 43.084336, longitude : -77.673766},//Clark Gym Entrance 1
+    {latitude : 43.084346, longitude : -77.673869},//Clark Gym Entrance 2
+    {latitude : 43.084179, longitude : -77.673946},//Campus Center Entrance
+    {latitude : 43.083673, longitude : -77.673913},//Back Campus Center Entrance
+    {latitude : 43.083942, longitude : -77.674499},//Ritz Entrance
+    {latitude : 43.084153, longitude : -77.674958},//Artenaso Entrance
+    {latitude : 43.084023, longitude : -77.675539},//SAU Back Entrance
+    {latitude : 43.084445, longitude : -77.673526},//Interfaith Center Entrance
+    {latitude : 43.083828, longitude : -77.673591},//Interfaith Center Back Entrance
+    {latitude : 43.083786, longitude : -77.673465},//SAU Creepy Back Entrance
+    {latitude : 43.083841, longitude : -77.675874},//Library Entrance 1
+    {latitude : 43.083578, longitude : -77.676453},//Library Entrance 2
+    {latitude : 43.084287, longitude : -77.676545},//Library Front Entrance
+    {latitude : 43.084632, longitude : -77.676319},//COLA Entrance 1
+    {latitude : 43.084484, longitude : -77.676561},//COLA Entrance 2
+    {latitude : 43.084322, longitude : -77.677307},//Gleason Entrance 1
+    {latitude : 43.084048, longitude : -77.677451},//Gleason Entrance 2
+    {latitude : 43.083770, longitude : -77.677356},//Gosnell Entrance 1
+    {latitude : 43.083601, longitude : -77.676740},//Gosnell Entrance 2
+    {latitude : 43.083458, longitude : -77.676899},//Gosnell Entrance 3
+    {latitiude : 43.083502, longitude : -77.677543},//Gosnell Entrance 4
+    {latitiude : 43.083684, longitude : -77.678120},//Gosnell Entrance 5
   ];
+
   render(){
     return(
       <MapView

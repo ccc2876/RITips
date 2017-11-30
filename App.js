@@ -1,10 +1,12 @@
 import React,  {Component } from 'react';
 import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
 import {StackNavigator,TabNavigator} from 'react-navigation';
+import EntertainmentMap from './EntertainmentMap';
 
 
 
 class HomeScreen extends Component {
+ 
     static navigationOptions={header: null};
     render() {
         const {navigate} =this.props.navigation;
@@ -12,7 +14,7 @@ class HomeScreen extends Component {
         <View style={styles.wrapper}>
             <View style={styles.right}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Entertainment','this will take you to the map of entertainment')}}  title='Entertainment'  color='#A9A9A9' />
+                <Button style={styles.button} onPress={() => navigate('EntertainmentPage')} title='Entertainment'  color='#A9A9A9' />
                 </View>
             </View>
                 <View style={styles.left}>
@@ -123,10 +125,13 @@ class NateScreen extends Component{
     render() {
         
         return (
+                <View>
                 <Text RITips/>
+                </View>
                 );
     }
 }
+
 const TabNav= TabNavigator({
     Claire: {screen: ClaireScreen},
     Ken: {screen: KenScreen},
@@ -142,6 +147,7 @@ const TabNav= TabNavigator({
 const BasicApp = StackNavigator({
       Home: {screen: HomeScreen},
       AboutUs: {screen: TabNav},
+      EntertainmentPage: {screen: EntertainmentMap},
       
 
       },

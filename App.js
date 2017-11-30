@@ -3,6 +3,7 @@ import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
 import {StackNavigator,TabNavigator} from 'react-navigation';
 import EntertainmentMap from './EntertainmentMap';
 import TunnelsMap from './TunnelsMap';
+import DiningMap from './DiningMap';
 
 class HomeScreen extends Component {
     
@@ -48,7 +49,7 @@ class HomeScreen extends Component {
                 </View>
                 <View style={styles.right}>
                 <View style={styles.blackboxsizechange}>
-                <Button style={styles.button} onPress={() => navigate('Home')} title='Dining' color='#173636'/>
+                <Button style={styles.button} onPress={() => navigate('DiningPage')} title='Dining' color='#173636'/>
                 </View>
                 </View>
                 <View style={styles.center}>
@@ -167,7 +168,7 @@ class infoScreen extends Component{
     render() {
         return (
         <View>
-        <Text style={styles.title}>Nate Baker</Text>
+        <Text style={styles.title}>Author Statement</Text>
         </View>
                 );
     }
@@ -175,12 +176,13 @@ class infoScreen extends Component{
 }
 
 const TabNav= TabNavigator({
+                           info: {screen: infoScreen},
                            Claire: {screen: ClaireScreen},
                            Ken: {screen: KenScreen},
                            Mackenzie: {screen: MackenzieScreen},
                            Malcolm: {screen: MalcolmScreen},
                            Nate: {screen: NateScreen},
-                           info: {screen: infoScreen}
+                           
                            
                            
                            
@@ -190,8 +192,8 @@ const BasicApp = StackNavigator({
                                 Home: {screen: HomeScreen},
                                 AboutUs: {screen: TabNav},
                                 EntertainmentPage: {screen: EntertainmentMap},
-                                TunnelsPage: {screen: TunnelsMap}
-                                
+                                TunnelsPage: {screen: TunnelsMap},
+                                DiningPage: {screen: DiningMap},
                                 },
                                 
                                 );

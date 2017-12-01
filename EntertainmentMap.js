@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MapView from 'react-native-maps';
 import StackNavigator from 'react-navigation';
-import {StyleSheet,View, Button, Alert,Text,Image} from 'react-native';
+import {StyleSheet,View,Text,Image} from 'react-native';
 import Constants from './App';
 
 const initialCoords = {

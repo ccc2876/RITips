@@ -4,6 +4,8 @@ import {StackNavigator,TabNavigator} from 'react-navigation';
 import EntertainmentMap from './EntertainmentMap';
 import TunnelsMap from './TunnelsMap';
 import DiningMap from './DiningMap';
+import TrailsMap from './TrailsMap';
+import StudySpotsMap from './StudySpotsMap';
 
 class HomeScreen extends Component {
     
@@ -44,7 +46,7 @@ class HomeScreen extends Component {
                 </View>
                 <View style={styles.left}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Smart Study Spots','this will take you to the map of study spots')}}title='Smart Study Spots' color='#A9A9A9'/>
+                <Button style={styles.button} onPress={() => navigate('StudySpotsPage')}title='Smart Study Spots' color='#A9A9A9'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -63,7 +65,7 @@ class HomeScreen extends Component {
                 </View>
                 <View style={styles.center}>
                 <View style={styles.box3}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Trails','this will take you to the map of the trails')}}title='Trails' color='#173636'/>
+                <Button style={styles.button} onPress={() => navigate('TrailsPage')} title='Trails' color='#173636'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -180,8 +182,8 @@ const TabNav= TabNavigator({
                            Claire: {screen: ClaireScreen},
                            Ken: {screen: KenScreen},
                            Mackenzie: {screen: MackenzieScreen},
-                           Malcolm: {screen: MalcolmScreen},
-                           Nate: {screen: NateScreen},
+                          Malcolm: {screen: MalcolmScreen},
+                          Nate: {screen: NateScreen},
                            
                            
                            
@@ -194,6 +196,8 @@ const BasicApp = StackNavigator({
                                 EntertainmentPage: {screen: EntertainmentMap},
                                 TunnelsPage: {screen: TunnelsMap},
                                 DiningPage: {screen: DiningMap},
+                                TrailsPage: {screen: TrailsMap},
+                                StudySpotsPage: {screen: StudySpotsMap}
                                 },
                                 
                                 );

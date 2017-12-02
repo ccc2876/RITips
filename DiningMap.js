@@ -57,6 +57,7 @@ class DiningMap extends Component {
                <View>
                <Text>-Weekday Hours: 7:30am-6:00pm</Text>
                <Text>-Weekend Hours: 10:00am-2:00pm</Text>
+               <Text>Review: This is a decent snack spot, with solid coffee that’s cheaper than most on campus. The pastries are good, but the selection is small.</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -82,6 +83,7 @@ class DiningMap extends Component {
                <Text>-Weekday Hours: 9:00am-9:00pm</Text>
                <Text>-Saturday Hours: 10:00am-9:00pm</Text>
                <Text>-Sunday Hours: 12:00pm-7:00pm</Text>
+               <Text>Review: Bytes is basically the corner store on academic side, with a similar selection of snacks and drinks. The selection is decent so if you need to grab something to eat on the go it’s a good place to go to.</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -106,6 +108,7 @@ class DiningMap extends Component {
                <Text>-Weekday Hours: 7:30am-11:00pm</Text>
                <Text>-Saturday Hours: 11:00am-11:00pm</Text>
                <Text>-Sunday Hours: 9:00am-11:00pm</Text>
+               <Text>Review: The specialty drinks are a plus, as are the USB smoothies. The selection of food, however, is limited and not really high quality. If you’re in need of coffee on dorm side, it’s a solid place to go.</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -219,6 +222,7 @@ class DiningMap extends Component {
                <View style={calloutStyleBubble}>
                <View style={calloutStyleHeader}>
                <Text style={textStyleHeader}>The College Grind</Text>
+               <Text>Review: The USB smoothies are always good, and the coffee is alright too. The College Grind is basically Beanz without the specialty drinks, so unless you don’t want to walk across dorm side it’s the inferior option.</Text>
                </View>
                <View>
                <Image
@@ -306,6 +310,7 @@ class DiningMap extends Component {
                <Text>-Monday - Thursday Hours: 7:30am - 8:00pm</Text>
                <Text>-Friday Hours: 7:30am - 3:00pm</Text>
                <Text>-Closed Weekends</Text>
+               <Text>Review: The food here is pretty good, but the coffee is mediocre. It is the only food near the Unity Quad so if you’re over there it is definitely the most convenient option</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -412,6 +417,7 @@ class DiningMap extends Component {
                <Text>-Friday Hours: 7:30am - 9:00pm</Text>
                <Text>-Saturday Hours: 11:30am - 9:00pm</Text>
                <Text>-Sunday Hours: 11:30am - 9:00pm</Text>
+               <Text>Review: Best coffee on campus, but has the pretty significant downside of not accepting dining dollars. Once you’re not a freshman and off a meal plan, it’s a great place to grab coffee, a snack, and do some studying.</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -437,6 +443,7 @@ class DiningMap extends Component {
                <Text>-Weekday Hours: 7:30am - 12:00am</Text>
                <Text>-Saturday Hours: 10:00am - 12:00am</Text>
                <Text>-Sunday Hours: 10:00am - 12:00am</Text>
+               <Text>Review: Midnight Oil is like fake Starbucks. The coffee is from there, but not prepared as well. If you are in Global Village and don’t want a full meal, you can grab a snack there too.</Text>
                </View>
                </View>
                </MapView.Callout>
@@ -462,6 +469,7 @@ class DiningMap extends Component {
                <Text>-Friday Hours: 10:00am - 5:00pm</Text>
                <Text>-Saturday Hours: 10:00am - 2:00pm</Text>
                <Text>Closed Sundays</Text>
+               <Text>Review: Nathan’s has a small menu and simple food, but it is done very well and you’re almost guaranteed to enjoy whatever you get. It’s more convenient than Brick City or Ritz right next to it </Text>
                </View>
                </View>
                </MapView.Callout>

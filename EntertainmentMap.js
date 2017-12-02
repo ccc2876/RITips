@@ -70,7 +70,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./fri.png')}
                style={calloutStyleImage}>
                </Image>
                </View>
@@ -98,7 +98,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./clark.png')}
                style={calloutStyleImage}>
                </Image>
                </View>
@@ -123,7 +123,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./gordon.png')}
                style={calloutStyleImage}>
                </Image>
                </View>
@@ -151,7 +151,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./ritzgame.png')}
                style={calloutStyleImage}>
                </Image>
                </View>
@@ -179,7 +179,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./ritchies.png')}
                style={calloutStyleImage}>
                </Image>
                </View>
@@ -237,7 +237,7 @@ class EntertainmentMap extends Component {
                <View>
                <Image
                
-               source={require('./genepol.jpg')}
+               source={require('./redbarn.png')}
                style={calloutStyleImage}>
                </Image>
                </View>

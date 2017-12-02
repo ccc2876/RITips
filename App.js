@@ -93,6 +93,7 @@ class ClaireScreen extends Component{
                 source={require('./IMG_1207.jpg')}
                 style={styles.image}>
                 </Image>
+                <Text>I am a first year Computer Science major here at RIT.  For this project, I contributed by designing many different aspects of the app that would portray our research in a user friendly way.</Text>
                 </View>
                 );
     }
@@ -170,9 +171,9 @@ class infoScreen extends Component{
     static navigationOptions ={ tabBarLabel: 'I',header: null, swipeEnabled: true}
     render() {
         return (
-        <View>
-        <Text style={styles.title}>Author Statement</Text>
-        </View>
+                <View>
+                <Text style={styles.title}>Author Statement</Text>
+                </View>
                 );
     }
     
@@ -183,8 +184,8 @@ const TabNav= TabNavigator({
                            Claire: {screen: ClaireScreen},
                            Ken: {screen: KenScreen},
                            Mackenzie: {screen: MackenzieScreen},
-                          Malcolm: {screen: MalcolmScreen},
-                          Nate: {screen: NateScreen},
+                           Malcolm: {screen: MalcolmScreen},
+                           Nate: {screen: NateScreen},
                            
                            
                            
@@ -222,8 +223,8 @@ height: 300,
 text:{
 fontSize: 15
 },
-
-
+    
+    
     
 black: {
 color: '#000000',
@@ -292,7 +293,7 @@ backgroundColor: '#663300',
 borderWidth: 2,
 borderColor: '#000000',
 },
- 
+    
 box3: {
 marginTop: 10,
 width: 300,

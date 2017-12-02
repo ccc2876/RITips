@@ -10,9 +10,6 @@ longitude: -77.6705,
 latitudeDelta: 0.0522,
 longitudeDelta: 0.0421,
 };
-
-class StudySpotsMap extends Component {
-static navigationOptions= {header:null};
 function getCallout(title, text){
 	return(
 	<MapView.Callout tooltip={true}>
@@ -27,6 +24,9 @@ function getCallout(title, text){
     </MapView.Callout>
     );
 }
+class StudySpotsMap extends Component {
+static navigationOptions= {header:null};
+
 render(){
 var coords = [
 //Nice Day Study Spots

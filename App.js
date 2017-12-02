@@ -6,6 +6,7 @@ import TunnelsMap from './TunnelsMap';
 import DiningMap from './DiningMap';
 import TrailsMap from './TrailsMap';
 import StudySpotsMap from './StudySpotsMap';
+import TutoringServicesMap from './TutoringServicesMap';
 
 class HomeScreen extends Component {
     
@@ -32,7 +33,7 @@ class HomeScreen extends Component {
                 </View>
                 <View style={styles.left}>
                 <View style={styles.box}>
-                <Button style={styles.button} onPress={ ()=>{Alert.alert('Tutoring Services','this will take you to the map of tutoring services')}}title='Tutoring Services' color='#A9A9A9'/>
+                <Button style={styles.button} onPress={ ()=> navigate('TutoringServicesPage')}title='Tutoring Services' color='#A9A9A9'/>
                 </View>
                 </View>
                 <View style={styles.right}>
@@ -197,7 +198,8 @@ const BasicApp = StackNavigator({
                                 TunnelsPage: {screen: TunnelsMap},
                                 DiningPage: {screen: DiningMap},
                                 TrailsPage: {screen: TrailsMap},
-                                StudySpotsPage: {screen: StudySpotsMap}
+                                StudySpotsPage: {screen: StudySpotsMap},
+                                TutoringServicesPage : {screen: TutoringServicesMap}
                                 },
                                 
                                 );

@@ -6,7 +6,7 @@ import Constants from './App';
 
 const initialCoords = {
 latitude: 43.0861,
-longitude: longitude: -77.6705,
+longitude: -77.6705,
 latitudeDelta: 0.0522,
 longitudeDelta: 0.0421,
 };
@@ -48,67 +48,101 @@ class TutoringServicesMap extends Component {
                style = {{flex: 1}}
                initialRegion={initialCoords}
             >
-            <Mapview.Marker
+            <MapView.Marker
             	coordinate={coords[0]}
             >
             {getCallout("Accounting/Finance", "Lowenthal Hall, 3rd floor study lounge")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[1]}
             >
             {getCallout("Chemistry/Physics", "Gosnell College of Science")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[2]}
             >
             {getCallout("Computer Science", "Golisano 3660")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[3]}
             >
             {getCallout("Computing Security", "Golisano 2410")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[4]}
             >
             {getCallout("Game Design & New Media", "Golisano 2000 & 2550")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[5]}
             >
             {getCallout("Information Science & Technology", "Golisano 2670")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[6]}
             >
             {getCallout("Software Engineering", "Golisano 1670")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[7]}
             >
             {getCallout("Biomedical/Chemical Engineering", "Institute Hall 3101 & 2101")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[8]}
             >
             {getCallout("Computer Engineering", "GLE-3452")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[9]}
             >
             {getCallout("Electrical & Microelectronic Engineering", "North Side of Erdle Commons")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[10]}
             >
             {getCallout("Industrial & Systems Engineering", "")}
-            </Mapview.Marker>
-            <Mapview.Marker
+            </MapView.Marker>
+            <MapView.Marker
             	coordinate={coords[11]}
             >
             {getCallout("Mechanical Engineering", "South side of Erdle Commons")}
-            </Mapview.Marker>
+            </MapView.Marker>
             </MapView>
     		);
     }
 }
+
+const calloutStyleBubble = {
+backgroundColor: '#fff',
+borderRadius: 6,
+borderColor: '#ccc',
+borderWidth: 0.5,
+padding: 15,
+width: 180
+}
+const calloutStyleHeader = {
+width: 150,
+height: 50,
+justifyContent: 'center',
+alignItems: 'center',
+};
+
+const textStyleHeader = {
+fontWeight: 'bold',
+fontSize: 16,
+justifyContent: 'center'
+}
+
+const calloutStyleImage = {
+width: 150,
+height: 100,
+
+};
+
+const calloutStyleDesc = {
+width: 150,
+height: 150
+};
+
+export default TutoringServicesMap

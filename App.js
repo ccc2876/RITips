@@ -157,7 +157,7 @@ class NateScreen extends Component{
                 <Text style={styles.title}>Nate Baker</Text>
                 <Image
                 
-                source={require('./IMG_1207.jpg')}
+                source={require('./nate.jpg')}
                 style={styles.image}>
                 </Image>
                 <Text>I am a first year Computer Science student at RIT. My contribution was development of the Google Maps integration, and learning and using the API in order to create something that is both informative and presentable.</Text>
